@@ -411,7 +411,7 @@
     //-------------------RED CELL functions-------------------------------------
     for (var i=0; i<redcells.length; i++) {
       // this function changes the body backgroundColor
-      function onCellClick(event) {
+      function onCellClick1(event) {
         //console.log(event.target.textContent)
         red=event.target.textContent;
         //console.log(red+green+blue)
@@ -422,13 +422,13 @@
         redcurrent[0].className = redcurrent[0].className.replace(" active", "");
         this.className += " active";
       }
-      redcells[i].onclick= onCellClick
+      redcells[i].onclick= onCellClick1
     }
 
     //-------------------GREEN CELL functions-----------------------------------
     for (var i=0; i<greencells.length; i++) {
       // this function changes the body backgroundColor
-      function onCellClick(event) {
+      function onCellClick2(event) {
         //console.log(event.target.textContent)
         green=event.target.textContent
         //console.log(red+green+blue)
@@ -439,14 +439,14 @@
         greencurrent[0].className = greencurrent[0].className.replace(" active", "");
         this.className += " active";
       }
-      greencells[i].onclick= onCellClick
+      greencells[i].onclick= onCellClick2
     }
 
     //-------------------BLUE CELL functions------------------------------------
 
     for (var i=0; i<bluecells.length; i++) {
       // this function changes the body backgroundColor
-      function onCellClick(event) {
+      function onCellClick3(event) {
         //console.log(event.target.textContent)
         blue=event.target.textContent
         //console.log(red+green+blue)
@@ -457,7 +457,7 @@
         bluecurrent[0].className = bluecurrent[0].className.replace(" active", "");
         this.className += " active";
       }
-      bluecells[i].onclick= onCellClick
+      bluecells[i].onclick= onCellClick3
     }
   </script>
   </body>
