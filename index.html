@@ -8,7 +8,7 @@
   <h1>
     <div class="h1main" style="float: left"><span class="bold">fun</span>with<span class="bold">hex</span>codes</div><!--
     --><div class="hexmother" style="float: right">#<span class="redhex">ff</span><span class="greenhex">ff</span><span class="bluehex">ff</span></div><div style="clear: both;"></div>
-    <div class="subtitle">how are hex code colors constructed? play around and find out.</div>
+    <div class="subtitle">how are hex code colors constructed? click around and find out.</div>
   </h1>
 <div class="tablemother">
   <div class="red table">
@@ -305,7 +305,7 @@
       --><div class="cell">fc</div><div class="cell">fd</div><div class="cell">fe</div><div class="cell active">ff</div>
     </div>
   </div>
-  <div class= "metadata" style: "float: right">swg/jlc 2020.
+  <div class= "metadata" style: "float: right">
     <a href="https://en.wikipedia.org/wiki/Web_colors#Hex_triplet"
     target="_blank">more info on hex codes here.
     </a>
@@ -418,14 +418,11 @@
         document.body.style.backgroundColor = "#"+red+green+blue;
         // hex string stuff
         redhex[0].textContent = red;
+        let redcurrent = document.querySelectorAll('.red .active');
+        redcurrent[0].className = redcurrent[0].className.replace(" active", "");
+        this.className += " active";
       }
       redcells[i].onclick= onCellClick
-      // this function changes the active cell color to dark gray
-      redcells[i].addEventListener("click", function() {
-        var current = document.querySelectorAll('.red .active');
-        current[0].className = current[0].className.replace(" active", "");
-        this.className += " active";
-      });
     }
 
     //-------------------GREEN CELL functions-----------------------------------
@@ -438,14 +435,11 @@
         document.body.style.background = "#"+red+green+blue
         // hex string stuff
         greenhex[0].textContent = green;
+        let greencurrent = document.querySelectorAll('.green .active');
+        greencurrent[0].className = greencurrent[0].className.replace(" active", "");
+        this.className += " active";
       }
       greencells[i].onclick= onCellClick
-      // this function changes the active cell color to dark gray
-      greencells[i].addEventListener("click", function() {
-        var current = document.querySelectorAll('.green .active');
-        current[0].className = current[0].className.replace(" active", "");
-        this.className += " active";
-      });
     }
 
     //-------------------BLUE CELL functions------------------------------------
@@ -459,14 +453,11 @@
         document.body.style.background = "#"+red+green+blue
         // hex string stuff
         bluehex[0].textContent = blue;
+        let bluecurrent = document.querySelectorAll('.blue .active');
+        bluecurrent[0].className = bluecurrent[0].className.replace(" active", "");
+        this.className += " active";
       }
       bluecells[i].onclick= onCellClick
-      // this function changes the active cell color to dark gray
-      bluecells[i].addEventListener("click", function() {
-        var current = document.querySelectorAll('.blue .active');
-        current[0].className = current[0].className.replace(" active", "");
-        this.className += " active";
-      });
     }
   </script>
   </body>
